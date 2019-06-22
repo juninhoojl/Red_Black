@@ -66,7 +66,7 @@ void imprimeVetor(int vet[], int tam){
     return;
 }
 
-void gerarAleatorio(FILE *arqSaida, int tam, int op){
+int gerarArquivo(FILE *arqSaida, int tam, int op){
     srand((int)time(NULL));
     
     int i = 0;
@@ -77,6 +77,10 @@ void gerarAleatorio(FILE *arqSaida, int tam, int op){
         
         vet = (int *) malloc(tam * sizeof(int));
         //Gera vetor ordenado e embaralha na sequencia
+        
+        if(vet == NULL){ //Nao conseguiu alocar
+            return 1;
+        }
         
         for (i = 0; i < tam; i++)
             vet[i] = i;
@@ -105,6 +109,6 @@ void gerarAleatorio(FILE *arqSaida, int tam, int op){
         }
     }
     
-    return;
+    return 0;
 }
 

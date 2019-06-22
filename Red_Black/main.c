@@ -16,7 +16,7 @@
 
 int main(int argc, const char * argv[]){
     
-    int aux = 0, tam = 0, tipoArquivo = 0, *vet;
+    int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
@@ -58,7 +58,10 @@ int main(int argc, const char * argv[]){
         }
         
         //Escolhe o tipo de aquivo
-        gerarAleatorio(arq, tam, tipoArquivo);
+        verifica = gerarArquivo(arq, tam, tipoArquivo);
+        if (verifica) { // erro em alocar
+            return 1;
+        }
         tipoArquivo = 0;
         
         //Depois de escrever fecha

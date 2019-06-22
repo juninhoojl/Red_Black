@@ -26,6 +26,6 @@ void escreveArquivo(int vet[], FILE *arqSaida, int tam);
 void imprimeVetor(int vet[], int tam);
 
 //Se for opcao 1, é aleatorio, se 2 é crescente, se 3 é decrecente
-void gerarAleatorio(FILE *arqSaida, int qtd, int op);
+int gerarArquivo(FILE *arqSaida, int qtd, int op);
 
 #endif /* es_h */
