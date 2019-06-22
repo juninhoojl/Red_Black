@@ -172,8 +172,6 @@ struct NO* balancear(struct NO* H){
 
 
 // Insere na arvore
-
-
 int insere_RedBlack(ArvLLRB* raiz, int valor){
     
     int resp;
@@ -358,12 +356,18 @@ struct NO* procuraMenor(struct NO* atual){
     return no1;
 }
 
+
+// Funcao que consulta existencia de um valor
+// Retorna 1 se ele existe e 0 caso contrario
 int consulta_RedBlack(ArvLLRB* raiz, int valor){
     
+    //Raiz nula, nao tem nenhum valor
     if(raiz == NULL)
-        return 0; //Nao existe pq esta vazia
+        return 0;
     
     struct NO* atual = *raiz;
+    
+    //Ate o atual for nulo vai procurando
     while(atual != NULL){
         if(valor == atual->info){
             return 1;// No existe
@@ -375,12 +379,9 @@ int consulta_RedBlack(ArvLLRB* raiz, int valor){
             
             atual = atual->esq;
         }
-        
     }
-    
-    
-    
-    
+
+    //Caso termine chegue aqui nao encontrou
     return 0;
 }
 

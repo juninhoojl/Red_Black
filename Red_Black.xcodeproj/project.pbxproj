@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A90BA46322BE88360074E421 /* es.c in Sources */ = {isa = PBXBuildFile; fileRef = A90BA46222BE88360074E421 /* es.c */; };
 		A981621B22BB29A800FF9610 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A981621A22BB29A800FF9610 /* main.c */; };
 		A984B21222BD13B800A0B73A /* RedBlackTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A984B21122BD13B800A0B73A /* RedBlackTree.c */; };
 /* End PBXBuildFile section */
@@ -24,6 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A90BA46122BE88360074E421 /* es.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = es.h; sourceTree = "<group>"; };
+		A90BA46222BE88360074E421 /* es.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = es.c; sourceTree = "<group>"; };
 		A981621722BB29A800FF9610 /* Red_Black */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Red_Black; sourceTree = BUILT_PRODUCTS_DIR; };
 		A981621A22BB29A800FF9610 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		A984B21022BD13B800A0B73A /* RedBlackTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBlackTree.h; sourceTree = "<group>"; };
@@ -63,6 +66,8 @@
 				A981621A22BB29A800FF9610 /* main.c */,
 				A984B21022BD13B800A0B73A /* RedBlackTree.h */,
 				A984B21122BD13B800A0B73A /* RedBlackTree.c */,
+				A90BA46122BE88360074E421 /* es.h */,
+				A90BA46222BE88360074E421 /* es.c */,
 			);
 			path = Red_Black;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 			files = (
 				A981621B22BB29A800FF9610 /* main.c in Sources */,
 				A984B21222BD13B800A0B73A /* RedBlackTree.c in Sources */,
+				A90BA46322BE88360074E421 /* es.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

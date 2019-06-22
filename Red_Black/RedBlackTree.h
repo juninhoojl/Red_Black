@@ -29,6 +29,10 @@ struct NO* procuraMenor(struct NO* atual);
 
 struct NO* removeNO(struct NO* H, int valor);
 
+
+
+// Funcao que consulta existencia de um valor
+// Retorna 1 se ele existe e 0 caso contrario
 int consulta_RedBlack(ArvLLRB* raiz, int valor);
 
 #endif /* RedBlackTree_h */
