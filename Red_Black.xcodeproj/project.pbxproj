@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		A981621B22BB29A800FF9610 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A981621A22BB29A800FF9610 /* main.c */; };
+		A984B21222BD13B800A0B73A /* RedBlackTree.c in Sources */ = {isa = PBXBuildFile; fileRef = A984B21122BD13B800A0B73A /* RedBlackTree.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		A981621722BB29A800FF9610 /* Red_Black */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Red_Black; sourceTree = BUILT_PRODUCTS_DIR; };
 		A981621A22BB29A800FF9610 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A984B21022BD13B800A0B73A /* RedBlackTree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RedBlackTree.h; sourceTree = "<group>"; };
+		A984B21122BD13B800A0B73A /* RedBlackTree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = RedBlackTree.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				A981621A22BB29A800FF9610 /* main.c */,
+				A984B21022BD13B800A0B73A /* RedBlackTree.h */,
+				A984B21122BD13B800A0B73A /* RedBlackTree.c */,
 			);
 			path = Red_Black;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A981621B22BB29A800FF9610 /* main.c in Sources */,
+				A984B21222BD13B800A0B73A /* RedBlackTree.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

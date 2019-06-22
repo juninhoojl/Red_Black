@@ -7,9 +7,18 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include "RedBlackTree.h"
+
+//int x = insere_RedBlack(raiz, valor);
+
+//int y = remove_RedBlack(raiz, valor);
+
 
 int main(int argc, const char * argv[]) {
     // insert code here...
     printf("Hello, World!\n");
     return 0;
+ 
 }
+
