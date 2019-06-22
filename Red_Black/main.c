@@ -4,7 +4,6 @@
 //  Created by:
 //  Andre Felipe Magalhães Silva - 2017020218
 //  José Luiz Corrêa Junior - 2017020933
-//  Vítor Siqueira Lobão - 2018004809
 //  Copyright 2019. All rights reserved.
 //
 
@@ -99,7 +98,6 @@ int main(int argc, const char * argv[]){
         fflush(stdin);
         scanf("%s",nomeArq);
         
-        
         arq = fopen(nomeArq, "r");
         if (!arq){//se o arq nao é nulo
             printf("Erro ao abrir o arquivo\n");
@@ -108,6 +106,7 @@ int main(int argc, const char * argv[]){
         
         printf("Digite a quantidade de elementos do arquivo: ");
         scanf("%d", &tam);
+        
         //O vetor sempre é alocado sequencialmente
         vet = (int*)malloc(tam*sizeof(int));
         
@@ -129,7 +128,7 @@ int main(int argc, const char * argv[]){
     }
     
     
-//Loop
+//Loop ate 4 ou 5
 //Árvores Balanceadas : Menu
 //1. Inserir novo elemento na árvore 2-3-4
 //2. Remover elemento da árvore 2-3-4
@@ -137,7 +136,7 @@ int main(int argc, const char * argv[]){
 //4. Converter em uma árvore rubro-negra
 //5. Sair
 
-//Loop
+//Loop ate 4
 //Árvores Balanceadas : Menu
 //1. Inserir novo elemento na árvore rubro-negra
 //2. Remover elemento da árvore rubro-negra

@@ -4,7 +4,6 @@
 //  Created by:
 //  Andre Felipe Magalhães Silva - 2017020218
 //  José Luiz Corrêa Junior - 2017020933
-//  Vítor Siqueira Lobão - 2018004809
 //  Copyright 2019. All rights reserved.
 //
 

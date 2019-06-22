@@ -1,14 +1,11 @@
 //
 //  RedBlackTree.c
 //  Red_Black
+//  Created by:
+//  Andre Felipe Magalhães Silva - 2017020218
+//  José Luiz Corrêa Junior - 2017020933
+//  Copyright 2019. All rights reserved.
 //
-//  Created by José Luiz Junior on 21/06/19.
-//  Copyright © 2019 José Luiz Junior. All rights reserved.
-//
-
-// -----------------
-// Tipo de dado arvore
-// Funcoes da arvore
 
 #include <stdio.h>
 #include <stdlib.h>
