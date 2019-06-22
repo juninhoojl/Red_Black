@@ -16,6 +16,10 @@
 #define true 1
 #define false 0
 
+//Funcao laco de insercao
+
+
+
 int main(int argc, const char * argv[]){
     
     int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
@@ -135,10 +139,14 @@ int main(int argc, const char * argv[]){
     
     
     //Ate aqui o Vet vai conter o que tem que estar na arvore
+    
+    //Funcao que vai executar um laco de insercao na arvore 2-3-4
+    
+    
     while(true){
         
         printf("\n---------------------------------------------");
-        printf("\nOpcoes:\n");
+        printf("\nOpcoes Menu-1:\n");
         printf("\t1. Inserir novo elemento na árvore 2-3-4\n");
         printf("\t2. Remover elemento da árvore 2-3-4\n");
         printf("\t3. Imprimir árvore 2-3-4\n");
@@ -166,7 +174,7 @@ int main(int argc, const char * argv[]){
                 while(true){
                     
                     printf("\n---------------------------------------------");
-                    printf("\nOpcoes:\n");
+                    printf("\nOpcoes Menu-2:\n");
                     printf("\t1. Inserir novo elemento na árvore rubro-negra\n");
                     printf("\t2. Remover elemento da árvore rubro-negra\n");
                     printf("\t3. Imprimir árvore rubro-negra\n");
@@ -178,13 +186,13 @@ int main(int argc, const char * argv[]){
                     scanf("%d",&opcao2);
                     
                     switch (opcao2) {
-                        case 1: // Insere na arvore 2-3-4
+                        case 1: // Insere na rubro negra
                             printf("Opcao 1b\n");
                             break;
-                        case 2: // Remove na arvore 2-3-4
+                        case 2: // Remove da rubro negra
                             printf("Opcao 2b\n");
                             break;
-                        case 3: // Imprimir arvore 2-3-4
+                        case 3: // Imprimir rubro negra
                             printf("Opcao 3b\n");
                             break;
                         case 4: // Sair
