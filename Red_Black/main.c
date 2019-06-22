@@ -13,9 +13,12 @@
 #include "RedBlackTree.h"
 #include "es.h"
 
+#define true 1
+#define false 0
+
 int main(int argc, const char * argv[]){
     
-    int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0;
+    int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
@@ -74,6 +77,9 @@ int main(int argc, const char * argv[]){
         }
         
         vet = (int*)malloc(tam*sizeof(int));
+        if (vet == NULL){ // Erro ao alocar
+            return 1;
+        }
         
         //Ler arquivo
         aux = lerArquivo(vet, arq, tam);
@@ -83,11 +89,11 @@ int main(int argc, const char * argv[]){
         
         if (aux == 1) {
             printf("\nTamanho do arquivo é maior que o especificado!");
-            printf("\nO programa sera encerrado\nar");
+            printf("\nO programa sera encerrado\n");
             exit(1);
         }else if (aux == 2){
             printf("\nTamanho do arquivo é menor que o especificado!");
-            printf("\nO programa sera encerrado\nar");
+            printf("\nO programa sera encerrado\n");
             exit(1);
         }
         
@@ -118,14 +124,57 @@ int main(int argc, const char * argv[]){
         
         if (aux == 1) {
             printf("\nTamanho do arquivo é maior que o especificado!");
-            printf("\nO programa sera encerrado\nar");
+            printf("\nO programa sera encerrado\n");
             exit(1);
         }else if (aux == 2){
             printf("\nTamanho do arquivo é menor que o especificado!");
-            printf("\nO programa sera encerrado\nar");
+            printf("\nO programa sera encerrado\n");
             exit(1);
         }
     }
+    
+    
+    //Ate aqui o Vet vai conter o que tem que estar na arvore
+    while(true){
+        
+        printf("\n---------------------------------------------");
+        printf("\nOpcoes:\n");
+        printf("\t1. Inserir novo elemento na árvore 2-3-4\n");
+        printf("\t2. Remover elemento da árvore 2-3-4\n");
+        printf("\t3. Imprimir árvore 2-3-4\n");
+        printf("\t4. Converter em uma árvore rubro-negra\n");
+        printf("\t5. Sair\n");
+        printf("---------------------------------------------\n");
+        printf("Digite a opcao desejada: ");
+        
+        //Captura opcao
+        scanf("%d",&opcao);
+
+        switch (opcao) {
+            case 1: // Insere na arvore 2-3-4
+                printf("Opcao 1\n");
+                break;
+            case 2: // Remove na arvore 2-3-4
+                printf("Opcao 2\n");
+                break;
+            case 3: // Imprimir arvore 2-3-4
+                printf("Opcao 3\n");
+                break;
+            case 4: // Converter em rubro negra
+                printf("Opcao 4\n");
+                break;
+            case 5: // Sair
+                printf("Opcao 5 - Sair\n");
+                return 1;
+                break;
+            default: // Opcao invalida
+                printf("Opcao Invalida!\n");
+                break;
+        }
+        
+    };
+    
+    
     
     
 //Loop ate 4 ou 5
