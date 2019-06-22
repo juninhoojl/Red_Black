@@ -18,7 +18,7 @@
 
 int main(int argc, const char * argv[]){
     
-    int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0;
+    int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
@@ -152,45 +152,61 @@ int main(int argc, const char * argv[]){
 
         switch (opcao) {
             case 1: // Insere na arvore 2-3-4
-                printf("Opcao 1\n");
+                printf("Opcao 1a\n");
                 break;
             case 2: // Remove na arvore 2-3-4
-                printf("Opcao 2\n");
+                printf("Opcao 2a\n");
                 break;
             case 3: // Imprimir arvore 2-3-4
-                printf("Opcao 3\n");
+                printf("Opcao 3a\n");
                 break;
             case 4: // Converter em rubro negra
-                printf("Opcao 4\n");
+                printf("Opcao 4a\n");
+                
+                while(true){
+                    
+                    printf("\n---------------------------------------------");
+                    printf("\nOpcoes:\n");
+                    printf("\t1. Inserir novo elemento na árvore rubro-negra\n");
+                    printf("\t2. Remover elemento da árvore rubro-negra\n");
+                    printf("\t3. Imprimir árvore rubro-negra\n");
+                    printf("\t4. Sair\n");
+                    printf("---------------------------------------------\n");
+                    printf("Digite a opcao desejada: ");
+                    
+                    //Captura opcao
+                    scanf("%d",&opcao2);
+                    
+                    switch (opcao2) {
+                        case 1: // Insere na arvore 2-3-4
+                            printf("Opcao 1b\n");
+                            break;
+                        case 2: // Remove na arvore 2-3-4
+                            printf("Opcao 2b\n");
+                            break;
+                        case 3: // Imprimir arvore 2-3-4
+                            printf("Opcao 3b\n");
+                            break;
+                        case 4: // Sair
+                            printf("Opcao 4b - Sair\n");
+                            return 1;
+                            break;
+                        default: // Opcao invalida
+                            printf("Opcao Invalida!\n");
+                            break;
+                    }
+                };
                 break;
             case 5: // Sair
-                printf("Opcao 5 - Sair\n");
+                printf("Opcao 5a - Sair\n");
                 return 1;
                 break;
             default: // Opcao invalida
                 printf("Opcao Invalida!\n");
                 break;
         }
-        
     };
     
-    
-    
-    
-//Loop ate 4 ou 5
-//Árvores Balanceadas : Menu
-//1. Inserir novo elemento na árvore 2-3-4
-//2. Remover elemento da árvore 2-3-4
-//3. Imprimir árvore 2-3-4 (pesquisar melhor forma de apresentar uma b-tree na tela)
-//4. Converter em uma árvore rubro-negra
-//5. Sair
-
-//Loop ate 4
-//Árvores Balanceadas : Menu
-//1. Inserir novo elemento na árvore rubro-negra
-//2. Remover elemento da árvore rubro-negra
-//3. Imprimir árvore rubro-negra
-//4. Sair
 
 
     return 0;
