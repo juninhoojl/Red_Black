@@ -7,6 +7,7 @@
 //  Copyright 2019. All rights reserved.
 //
 
+#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -21,17 +22,17 @@
 
 
 int main(int argc, const char * argv[]){
-    
+    setlocale(LC_ALL,"");
     int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
 //Leitura e criacao de arquivo
     
-    printf("Deseja gerar um arquivo? sim[s] nao[n]\n");
+    printf("Deseja gerar um arquivo? Sim[s] Não[n]\n");
     while (op != 's' && op != 'S' && op != 'n' && op != 'N' ) {
         if (op != '\0')
-            printf("Opcao invalida, digite novamente: ");
+            printf("Opção inválida, digite novamente: ");
         scanf("%s", &op);
     } // Se a resposta for sim
     if (op == 's' || op == 'S') {
@@ -54,10 +55,10 @@ int main(int argc, const char * argv[]){
         printf("\t1 - Aleatorio\n");
         printf("\t2 - Ordenado\n");
         printf("\t3 - Invertido\n");
-        printf("Digite a opcao desejada: ");
+        printf("Digite a opção desejada: ");
         while (tipoArquivo != 1 && tipoArquivo != 2 && tipoArquivo != 3) {
             if (tipoArquivo){
-                printf("Opcao invalida, digite novamente: ");
+                printf("Opção inválida, digite novamente: ");
             }
             
             scanf("%d",&tipoArquivo);
@@ -93,11 +94,11 @@ int main(int argc, const char * argv[]){
         
         if (aux == 1) {
             printf("\nTamanho do arquivo é maior que o especificado!");
-            printf("\nO programa sera encerrado\n");
+            printf("\nO programa será encerrado\n");
             exit(1);
         }else if (aux == 2){
             printf("\nTamanho do arquivo é menor que o especificado!");
-            printf("\nO programa sera encerrado\n");
+            printf("\nO programa será encerrado\n");
             exit(1);
         }
         
@@ -128,11 +129,11 @@ int main(int argc, const char * argv[]){
         
         if (aux == 1) {
             printf("\nTamanho do arquivo é maior que o especificado!");
-            printf("\nO programa sera encerrado\n");
+            printf("\nO programa será encerrado\n");
             exit(1);
         }else if (aux == 2){
             printf("\nTamanho do arquivo é menor que o especificado!");
-            printf("\nO programa sera encerrado\n");
+            printf("\nO programa será encerrado\n");
             exit(1);
         }
     }
@@ -146,35 +147,35 @@ int main(int argc, const char * argv[]){
     while(true){
         
         printf("\n---------------------------------------------");
-        printf("\nOpcoes Menu-1:\n");
+        printf("\nOpções Menu-1:\n");
         printf("\t1. Inserir novo elemento na árvore 2-3-4\n");
         printf("\t2. Remover elemento da árvore 2-3-4\n");
         printf("\t3. Imprimir árvore 2-3-4\n");
         printf("\t4. Converter em uma árvore rubro-negra\n");
         printf("\t5. Sair\n");
         printf("---------------------------------------------\n");
-        printf("Digite a opcao desejada: ");
+        printf("Digite a Opção desejada: ");
         
         //Captura opcao
         scanf("%d",&opcao);
 
         switch (opcao) {
             case 1: // Insere na arvore 2-3-4
-                printf("Opcao 1a\n");
+                printf("Opção 1a\n");
                 break;
             case 2: // Remove na arvore 2-3-4
-                printf("Opcao 2a\n");
+                printf("Opção 2a\n");
                 break;
             case 3: // Imprimir arvore 2-3-4
-                printf("Opcao 3a\n");
+                printf("Opção 3a\n");
                 break;
             case 4: // Converter em rubro negra
-                printf("Opcao 4a\n");
+                printf("Opção 4a\n");
                 
                 while(true){
                     
                     printf("\n---------------------------------------------");
-                    printf("\nOpcoes Menu-2:\n");
+                    printf("\nOpções Menu-2:\n");
                     printf("\t1. Inserir novo elemento na árvore rubro-negra\n");
                     printf("\t2. Remover elemento da árvore rubro-negra\n");
                     printf("\t3. Imprimir árvore rubro-negra\n");
@@ -187,30 +188,30 @@ int main(int argc, const char * argv[]){
                     
                     switch (opcao2) {
                         case 1: // Insere na rubro negra
-                            printf("Opcao 1b\n");
+                            printf("Opção 1b\n");
                             break;
                         case 2: // Remove da rubro negra
-                            printf("Opcao 2b\n");
+                            printf("Opção 2b\n");
                             break;
                         case 3: // Imprimir rubro negra
-                            printf("Opcao 3b\n");
+                            printf("Opção 3b\n");
                             break;
                         case 4: // Sair
-                            printf("Opcao 4b - Sair\n");
+                            printf("Opção 4b - Sair\n");
                             return 1;
                             break;
                         default: // Opcao invalida
-                            printf("Opcao Invalida!\n");
+                            printf("Opção Inválida!\n");
                             break;
                     }
                 };
                 break;
             case 5: // Sair
-                printf("Opcao 5a - Sair\n");
+                printf("Opção 5a - Sair\n");
                 return 1;
                 break;
             default: // Opcao invalida
-                printf("Opcao Invalida!\n");
+                printf("Opção Inválida!\n");
                 break;
         }
     };
