@@ -21,6 +21,7 @@
 
 
 
+
 int main(int argc, const char * argv[]){
     setlocale(LC_ALL,"");
     int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
@@ -154,7 +155,6 @@ int main(int argc, const char * argv[]){
     
     //Funcao que vai executar um laco de insercao na arvore 2-3-4
     
-    
     while(true){
         
         printf("\n---------------------------------------------");
@@ -207,7 +207,6 @@ int main(int argc, const char * argv[]){
                             printf("Opção 2b\n");
                             break;
                         case 3: // Imprimir rubro negra
-
                             printf("Pos-Ordem:\n");
                             posOrdem_ArvBin(raiz);
                             
