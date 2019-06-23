@@ -18,14 +18,10 @@
 #define false 0
 
 //Funcao laco de insercao
-
-
-
-
 int main(int argc, const char * argv[]){
     setlocale(LC_ALL,"");
     int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
-    int vlido = 0;
+    int vlido = 0, laco1 = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
@@ -183,6 +179,12 @@ int main(int argc, const char * argv[]){
             case 4: // Converter em rubro negra
                 printf("Opção 4a\n");
                 
+                //Insere todos os valores do vetor na rubro negra
+                
+                for (laco1 = 0; laco1 < tam; laco1++) {
+                    insere_RedBlack(raiz, vet[laco1]);
+                }
+ 
                 while(true){
                     
                     printf("\n---------------------------------------------");

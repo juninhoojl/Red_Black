@@ -438,7 +438,4 @@ void posOrdem_RedBlack(RedBlack *raiz){
         printf("%d\n",(*raiz)->info);
         
     }
-    
 }
-
-
