@@ -25,16 +25,28 @@ int remove_RedBlack(RedBlack* raiz, int valor);
 
 struct NO* insereNO(struct NO* H, int valor, int *resp);
 
+struct NO* move2DirRED(struct NO* H);
+
+struct NO* balancear(struct NO* H);
+
+struct NO* move2EsqRED(struct NO* H);
+
+struct NO* rotacionaDireita(struct NO* A);
+
+struct NO* removeMenor(struct NO* H);
+
 struct NO* procuraMenor(struct NO* atual);
 
 struct NO* removeNO(struct NO* H, int valor);
 
-
+struct NO* rotacionaEsquerda(struct NO* A);
 
 void preOrdem_RedBlack(RedBlack *raiz);
 void emOrdem_RedBlack(RedBlack *raiz);
 void posOrdem_RedBlack(RedBlack *raiz);
 
+void trocaCor(struct NO* H);
+int cor(struct NO* H);
 
 void libera_RedBlack(RedBlack *raiz);
 
