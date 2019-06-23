@@ -24,9 +24,12 @@
 int main(int argc, const char * argv[]){
     setlocale(LC_ALL,"");
     int aux = 0, tam = 0, tipoArquivo = 0, *vet, verifica = 0, opcao = 0, opcao2 = 0;
+    int vlido = 0;
     char nomeArq[30], op = '\0';
     FILE *arq;
 
+    
+    
 //Leitura e criacao de arquivo
     
     printf("Deseja gerar um arquivo? Sim[s] Não[n]\n");
@@ -139,6 +142,14 @@ int main(int argc, const char * argv[]){
     }
     
     
+    ArvLLRB* raiz = cria_ArvLLRB();
+    // Cria
+    
+    
+    
+    // Insere valores
+    // Imprime
+    
     //Ate aqui o Vet vai conter o que tem que estar na arvore
     
     //Funcao que vai executar um laco de insercao na arvore 2-3-4
@@ -188,13 +199,18 @@ int main(int argc, const char * argv[]){
                     
                     switch (opcao2) {
                         case 1: // Insere na rubro negra
-                            printf("Opção 1b\n");
+                            printf("\nDigite o valor que deseja inserir: ");
+                            scanf("%d",&vlido);
+                            insere_RedBlack(raiz, vlido);
                             break;
                         case 2: // Remove da rubro negra
                             printf("Opção 2b\n");
                             break;
                         case 3: // Imprimir rubro negra
-                            printf("Opção 3b\n");
+
+                            printf("Pos-Ordem:\n");
+                            posOrdem_ArvBin(raiz);
+                            
                             break;
                         case 4: // Sair
                             printf("Opção 4b - Sair\n");

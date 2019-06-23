@@ -23,6 +23,20 @@ struct NO{
 };
 
 
+ArvLLRB* cria_ArvLLRB(void){
+    // Ou seja
+    ArvLLRB* raiz = (ArvLLRB*) malloc(sizeof(ArvLLRB));
+    
+    //Se deu certo, aponta null
+    if(raiz != NULL)
+        *raiz = NULL;
+    
+    return raiz;
+}
+
+
+
+
 //Pega a cor do no
 int cor(struct NO* H){
     if(H == NULL) // Se for nulo sempre é preto
@@ -381,4 +395,52 @@ int consulta_RedBlack(ArvLLRB* raiz, int valor){
     //Caso termine chegue aqui nao encontrou
     return 0;
 }
+
+void preOrdem_ArvBin(ArvLLRB *raiz){
+    
+    //O valor que recebeu nao é null
+    if (raiz == NULL) {
+        return;
+    }//se onde aponta nao é null
+    if(*raiz != NULL) {
+        
+        printf("%d\n",(*raiz)->info);
+        preOrdem_ArvBin(&((*raiz)->esq));
+        preOrdem_ArvBin(&((*raiz)->dir));
+        
+    }
+    
+}
+
+void emOrdem_ArvBin(ArvLLRB *raiz){
+    
+    //O valor que recebeu nao é null
+    if (raiz == NULL) {
+        return;
+    }//se onde aponta nao é null
+    if(*raiz != NULL) {
+        
+        emOrdem_ArvBin(&((*raiz)->esq));
+        printf("%d\n",(*raiz)->info);
+        emOrdem_ArvBin(&((*raiz)->dir));
+    }
+    
+}
+
+void posOrdem_ArvBin(ArvLLRB *raiz){
+    
+    //O valor que recebeu nao é null
+    if (raiz == NULL) {
+        return;
+    }//se onde aponta nao é null
+    if(*raiz != NULL) {
+        
+        posOrdem_ArvBin(&((*raiz)->esq));
+        posOrdem_ArvBin(&((*raiz)->dir));
+        printf("%d\n",(*raiz)->info);
+        
+    }
+    
+}
+
 

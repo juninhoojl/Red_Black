@@ -11,9 +11,13 @@
 
 //Facilitando ponteiro para ponteiro
 typedef struct NO* ArvLLRB;
+//Ponteiro inicial
 
 #include <stdio.h>
 #include <stdlib.h>
+
+
+ArvLLRB* cria_ArvLLRB(void);
 
 int insere_RedBlack(ArvLLRB* raiz, int valor);
 
@@ -24,6 +28,12 @@ struct NO* insereNO(struct NO* H, int valor, int *resp);
 struct NO* procuraMenor(struct NO* atual);
 
 struct NO* removeNO(struct NO* H, int valor);
+
+
+
+void preOrdem_ArvBin(ArvLLRB *raiz);
+void emOrdem_ArvBin(ArvLLRB *raiz);
+void posOrdem_ArvBin(ArvLLRB *raiz);
 
 
 
