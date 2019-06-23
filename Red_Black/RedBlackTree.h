@@ -10,18 +10,18 @@
 #define RedBlackTree_h
 
 //Facilitando ponteiro para ponteiro
-typedef struct NO* ArvLLRB;
+typedef struct NO* RedBlack;
 //Ponteiro inicial
 
 #include <stdio.h>
 #include <stdlib.h>
 
 
-ArvLLRB* cria_ArvLLRB(void);
+RedBlack* cria_RedBlack(void);
 
-int insere_RedBlack(ArvLLRB* raiz, int valor);
+int insere_RedBlack(RedBlack* raiz, int valor);
 
-int remove_RedBlack(ArvLLRB* raiz, int valor);
+int remove_RedBlack(RedBlack* raiz, int valor);
 
 struct NO* insereNO(struct NO* H, int valor, int *resp);
 
@@ -31,14 +31,17 @@ struct NO* removeNO(struct NO* H, int valor);
 
 
 
-void preOrdem_ArvBin(ArvLLRB *raiz);
-void emOrdem_ArvBin(ArvLLRB *raiz);
-void posOrdem_ArvBin(ArvLLRB *raiz);
+void preOrdem_RedBlack(RedBlack *raiz);
+void emOrdem_RedBlack(RedBlack *raiz);
+void posOrdem_RedBlack(RedBlack *raiz);
+
+
+void libera_RedBlack(RedBlack *raiz);
 
 
 
 // Funcao que consulta existencia de um valor
 // Retorna 1 se ele existe e 0 caso contrario
-int consulta_RedBlack(ArvLLRB* raiz, int valor);
+int consulta_RedBlack(RedBlack* raiz, int valor);
 
 #endif /* RedBlackTree_h */

@@ -143,7 +143,7 @@ int main(int argc, const char * argv[]){
     }
     
     
-    ArvLLRB* raiz = cria_ArvLLRB();
+    RedBlack* raiz = cria_RedBlack();
     // Cria
     
     
@@ -208,7 +208,7 @@ int main(int argc, const char * argv[]){
                             break;
                         case 3: // Imprimir rubro negra
                             printf("Pos-Ordem:\n");
-                            posOrdem_ArvBin(raiz);
+                            posOrdem_RedBlack(raiz);
                             
                             break;
                         case 4: // Sair

@@ -23,9 +23,9 @@ struct NO{
 };
 
 
-ArvLLRB* cria_ArvLLRB(void){
+RedBlack* cria_RedBlack(void){
     // Ou seja
-    ArvLLRB* raiz = (ArvLLRB*) malloc(sizeof(ArvLLRB));
+    RedBlack* raiz = (RedBlack*) malloc(sizeof(RedBlack));
     
     //Se deu certo, aponta null
     if(raiz != NULL)
@@ -33,8 +33,6 @@ ArvLLRB* cria_ArvLLRB(void){
     
     return raiz;
 }
-
-
 
 
 //Pega a cor do no
@@ -183,7 +181,7 @@ struct NO* balancear(struct NO* H){
 
 
 // Insere na arvore
-int insere_RedBlack(ArvLLRB* raiz, int valor){
+int insere_RedBlack(RedBlack* raiz, int valor){
     
     int resp;
     //funcao responsavel pela busca do local
@@ -273,7 +271,7 @@ struct NO* insereNO(struct NO* H, int valor, int *resp){
 
 
 
-int remove_RedBlack(ArvLLRB* raiz, int valor){
+int remove_RedBlack(RedBlack* raiz, int valor){
     
     if(consulta_RedBlack(raiz,valor)){//confere se existe
         
@@ -370,7 +368,7 @@ struct NO* procuraMenor(struct NO* atual){
 
 // Funcao que consulta existencia de um valor
 // Retorna 1 se ele existe e 0 caso contrario
-int consulta_RedBlack(ArvLLRB* raiz, int valor){
+int consulta_RedBlack(RedBlack* raiz, int valor){
     
     //Raiz nula, nao tem nenhum valor
     if(raiz == NULL)
@@ -396,7 +394,7 @@ int consulta_RedBlack(ArvLLRB* raiz, int valor){
     return 0;
 }
 
-void preOrdem_ArvBin(ArvLLRB *raiz){
+void preOrdem_RedBlack(RedBlack *raiz){
     
     //O valor que recebeu nao é null
     if (raiz == NULL) {
@@ -405,14 +403,14 @@ void preOrdem_ArvBin(ArvLLRB *raiz){
     if(*raiz != NULL) {
         
         printf("%d\n",(*raiz)->info);
-        preOrdem_ArvBin(&((*raiz)->esq));
-        preOrdem_ArvBin(&((*raiz)->dir));
+        preOrdem_RedBlack(&((*raiz)->esq));
+        preOrdem_RedBlack(&((*raiz)->dir));
         
     }
     
 }
 
-void emOrdem_ArvBin(ArvLLRB *raiz){
+void emOrdem_RedBlack(RedBlack *raiz){
     
     //O valor que recebeu nao é null
     if (raiz == NULL) {
@@ -420,14 +418,14 @@ void emOrdem_ArvBin(ArvLLRB *raiz){
     }//se onde aponta nao é null
     if(*raiz != NULL) {
         
-        emOrdem_ArvBin(&((*raiz)->esq));
+        emOrdem_RedBlack(&((*raiz)->esq));
         printf("%d\n",(*raiz)->info);
-        emOrdem_ArvBin(&((*raiz)->dir));
+        emOrdem_RedBlack(&((*raiz)->dir));
     }
     
 }
 
-void posOrdem_ArvBin(ArvLLRB *raiz){
+void posOrdem_RedBlack(RedBlack *raiz){
     
     //O valor que recebeu nao é null
     if (raiz == NULL) {
@@ -435,8 +433,8 @@ void posOrdem_ArvBin(ArvLLRB *raiz){
     }//se onde aponta nao é null
     if(*raiz != NULL) {
         
-        posOrdem_ArvBin(&((*raiz)->esq));
-        posOrdem_ArvBin(&((*raiz)->dir));
+        posOrdem_RedBlack(&((*raiz)->esq));
+        posOrdem_RedBlack(&((*raiz)->dir));
         printf("%d\n",(*raiz)->info);
         
     }
